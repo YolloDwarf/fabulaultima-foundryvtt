@@ -1,5 +1,5 @@
 {
-  "FABULAULTIMA": {
+  "FU": {
     "attributes": {
       "DEX": "DEX",
       "dexterity": "Dexterity",
@@ -23,40 +23,54 @@
     },
     "item": {
       "equipment": {
+        "addQuality": "Add Quality",
         "cost": "Cost",
         "qualities": "Qualities",
+        "qualitiesList": {
+          "amulet": "Amulet",
+          "antiStatus": "Antistatus",
+          "bonusMagic": "Magic Bonus",
+          "bonusPrecision": "Precision Bonus",
+          "breaks": "Breaks",
+          "bulwark": "Bulwark",
+          "doubleHunting": "Double Hunting",
+          "doubleResistance": "Doube Resistance",
+          "equipFreeHand": "Always Equipped in Free Hand",
+          "extraHand": "Heavy Weight",
+          "hunting": "Hunting",
+          "immunity": "Immunity",
+          "increasedDamage": "Extra Damage",
+          "lightened": "Light Weight",
+          "magical": "Magical",
+          "multi": "Multi",
+          "omnishield": "Omnishield",
+          "perfectHealth": "Perfect Health",
+          "piercing": "Piercing",
+          "resistance": "Resistance",
+          "status": "Status",
+          "statusPlus": "Status Plus",
+          "swordBreak": "Swordbreaking"
+        },
         "weapon": {
+          "1hand": "One-Handed",
+          "2hands": "Two-Handed",
           "damage": "Damage",
-          "hands": "Hands",
           "melee": "Melee",
           "precision": "Precision",
           "ranged": "Ranged",
-          "rangeType": "Type",
-          "rareQualities": {
-            "breaks": "Breaks",
-            "equipFreeHand": "Always Equipped in Free Hand",
-            "magical": "Magical",
-            "hunting": "Hunting",
-            "piercing": "Piercing",
-            "doubleHunting": "Double Hunting",
-            "multi": "Multi",
-            "status": "Status",
-            "statusPlus": "Status Plus",
-            "bonusMagic": "Magic Bonus",
-            "bonusPrecision": "Precision Bonus",
-            "increasedDamage": "Extra Damage",
-            "extraHand": "Heavy Weight",
-            "lightened": "Light Weight",
-            "antiStatus": "Antistatus",
-            "resistance": "Resistance",
-            "amulet": "Amulet",
-            "bulwark": "Bulwark",
-            "doubleResistance": "Doube Resistance",
-            "swordBreak": "Swordbreaking",
-            "immunity": "Immunity",
-            "omnishield": "Omnishield",
-            "perfectHealth": "Perfect Health"
-          }
+          "rangeType": "Type"
+        },
+        "weaponTypes": {
+          "arcane": "Arcane",
+          "bow": "Bow",
+          "brawl": "Brawling",
+          "dagger": "Dagger",
+          "firearm": "Firearm",
+          "flail": "Flail",
+          "heavy": "Heavy",
+          "lance": "Lance",
+          "sword": "Sword",
+          "thrown": "Thrown"
         }
       }
     }

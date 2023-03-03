@@ -35,4 +35,20 @@ export class FabulaUltimaWeaponSheet extends FabulaUltimaItemSheet {
     data.config = CONFIG.FABULAULTIMA;
     return data;
   }
+
+  /** @override */
+  activateListeners(html) {
+    html.find(".add-quality").click(this._addQuality.bind(this));
+
+    super.activateListeners(html);
+  }
+
+  _addQuality(event) {
+    event?.preventDefault();
+
+    return this.item.data.qualities.push({
+      name: game.i18n.localize("FU.item.equipment.newQuality"),
+      value: null,
+    });
+  }
 }

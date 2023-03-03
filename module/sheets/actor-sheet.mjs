@@ -69,7 +69,7 @@ export class FabulaUltimaActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
-      v.label = game.i18n.localize(CONFIG.FABULAULTIMA.abilities[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.FU.abilities[k]) ?? k;
     }
   }
 

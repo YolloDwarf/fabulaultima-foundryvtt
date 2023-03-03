@@ -1,71 +1,62 @@
-export const FABULAULTIMA = {};
+import { FUItems } from "./configs/items-config.mjs";
+
+export const FABULAULTIMA = {
+  items: FUItems,
+};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
-FABULAULTIMA.attributes = {
-  dexterity: "Dexterity",
-  intuition: "Intuition",
-  vigor: "Vigor",
-  will: "Will",
+FU.attributes = {
+  dexterity: game.i18n.localize("FU.attributes.dexterity"),
+  intuition: game.i18n.localize("FU.attributes.intuition"),
+  vigor: game.i18n.localize("FU.attributes.vigor"),
+  will: game.i18n.localize("FU.attributes.will"),
 };
 
-FABULAULTIMA.attrs = {
-  dexterity: "DEX",
-  intuition: "INT",
-  vigor: "VIG",
-  will: "WIL",
+FU.attrs = {
+  dexterity: game.i18n.localize("FU.attributes.DEX"),
+  intuition: game.i18n.localize("FU.attributes.INT"),
+  vigor: game.i18n.localize("FU.attributes.VIG"),
+  will: game.i18n.localize("FU.attributes.WIL"),
 };
 
-FABULAULTIMA.damageTypes = {
-  air: "Air",
-  earth: "Earth",
-  fire: "Fire",
-  ice: "Ice",
-  light: "Light",
-  lightning: "Lightning",
-  physical: "Physical",
-  poison: "Poison",
-  shadow: "Shadow",
-};
-
-FABULAULTIMA.equipment = {
-  cost: "Cost",
-  qualities: "Qualities",
-};
-
-FABULAULTIMA.weapon = {
-  damage: "Damage",
-  hands: "Hands",
-  melee: "Melee",
-  precision: "Precision",
-  ranged: "Ranged",
-  rangeType: "Type",
-};
-
-FABULAULTIMA.weaponQualities = {
-  breaks: "Breaks",
-  equipFreeHand: "Always Equipped in Free Hand",
-  magical: "Magical",
-  hunting: "Hunting",
-  piercing: "Piercing",
-  doubleHunting: "Double Hunting",
-  multi: "Multi",
-  status: "Status",
-  statusPlus: "Status Plus",
-  bonusMagic: "Magic Bonus",
-  bonusPrecision: "Precision Bonus",
-  increasedDamage: "Extra Damage",
-  extraHand: "Heavy Weight",
-  lightened: "Light Weight",
-  antiStatus: "Antistatus",
-  resistance: "Resistance",
-  amulet: "Amulet",
-  bulwark: "Bulwark",
-  doubleResistance: "Doube Resistance",
-  swordBreak: "Swordbreaking",
-  immunity: "Immunity",
-  omnishield: "Omnishield",
-  perfectHealth: "Perfect Health",
+FU.damageTypes = {
+  air: {
+    name: game.i18n.localize("FU.damageType.air"),
+    value: "air",
+  },
+  earth: {
+    name: game.i18n.localize("FU.damageType.earth"),
+    value: "earth",
+  },
+  fire: {
+    name: game.i18n.localize("FU.damageType.fire"),
+    value: "fire",
+  },
+  ice: {
+    name: game.i18n.localize("FU.damageType.ice"),
+    value: "ice",
+  },
+  light: {
+    name: game.i18n.localize("FU.damageType.light"),
+    value: "light",
+  },
+  lightning: {
+    name: game.i18n.localize("FU.damageType.lightning"),
+    value: "lightning",
+  },
+  physical: {
+    name: game.i18n.localize("FU.damageType.physical"),
+    value: "physical",
+  },
+  poison: {
+    name: game.i18n.localize("FU.damageType.poison"),
+    value: "poison",
+  },
+  shadow: {
+    name: game.i18n.localize("FU.damageType.shadow"),
+    value: "Shadow",
+  },
 };

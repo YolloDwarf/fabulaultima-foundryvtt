@@ -23,9 +23,9 @@
     <div class="equipment-top">
       <table>
         <tr class="equipment-header">
-          <th>{{localize "FABULAULTIMA.item.equipment.cost"}}</th>
-          <th>{{localize "FABULAULTIMA.item.equipment.weapon.precision"}}</th>
-          <th>{{localize "FABULAULTIMA.item.equipment.weapon.damage"}}</th>
+          <th>{{localize "FU.item.equipment.cost"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.precision"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.damage"}}</th>
         </tr>
         <tr>
           <td>
@@ -69,20 +69,62 @@
       </table>
     </div>
 
-    <div class="weapon-qualities">
-      <div class="equipment-cell">
-        <span>{{localize "FABULAULTIMA.item.equipment.weapon.hands"}}</span>
-        <select name="data.hands">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select>
+    <div class="weapon-info">
+      <div class="infos">
+        <div>
+          <select name="data.type">
+            {{#select data.type}} {{#each config.item.weaponTypes as |name
+            attribute| }}
+            <option value="{{attribute}}">{{name}}</option>
+            {{/each}} {{/select}}
+          </select>
+        </div>
+        <div>
+          <select name="data.hands">
+            <option value="1">{{localize "FU.item.weapon.1hand"}}</option>
+            <option value="2">{{localize "FU.item.weapon.2hands"}}</option>
+          </select>
+        </div>
+        <div>
+          <select name="data.rangeType">
+            <option value="melee">{{localize "FU.item.weapon.melee"}}</option>
+            <option value="ranged">{{localize "FU.item.weapon.ranged"}}</option>
+          </select>
+        </div>
       </div>
-      <div class="equipment-cell">
-        <span>{{localize "FABULAULTIMA.item.equipment.weapon.rangeType"}}</span>
-        <select name="data.type">
-          <option value="1"></option>
-          <option value="2">2</option>
+
+      <div class="qualities-header">
+        <div>
+          <span class="qualities-title"
+            >{{localize "FU.item.equipment.qualities"}}</span
+          >
+          <a
+            class="item-create add-quality"
+            title="{{localize 'FU.item.equipment.addQuality'}}"
+          >
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        {{#each data.qualities as |itemQuality index}}
+        <select name="data.qualities[{{@index}}].name">
+          {{#select itemQuality.name}} {{#each config.items.weaponQualities as
+          |quality qualityId| }}
+          <option value="{{qualityId}}">{{quality.name}}</option>
+          {{/each}} {{/select}}
         </select>
+        {{#if config.items.weaponQualities[@index].type }} {{#if
+        config.items.weaponQualities[@index].type === 'select'}} {{#else}}
+        <input
+          name="{{index}}-amount"
+          type="number"
+          value="{{itemQuality.value}}"
+          data-dtype="Number"
+          placeholder="Name"
+        />
+        {{/if}} {{/if}} {{/each}}
       </div>
     </div>
   </section>
