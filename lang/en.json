@@ -1,22 +1,64 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
-
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
-
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
-
-  "BOILERPLATE.Add": "Add"
+  "FABULAULTIMA": {
+    "attributes": {
+      "DEX": "DEX",
+      "dexterity": "Dexterity",
+      "INT": "INT",
+      "intuition": "Intuition",
+      "VIG": "VIG",
+      "vigor": "Vigor",
+      "WIL": "WIL",
+      "will": "Will"
+    },
+    "damageType": {
+      "air": "Air",
+      "earth": "Earth",
+      "fire": "Fire",
+      "ice": "Ice",
+      "light": "Light",
+      "lightning": "Lightning",
+      "physical": "Physical",
+      "poison": "Poison",
+      "shadow": "Shadow"
+    },
+    "item": {
+      "equipment": {
+        "cost": "Cost",
+        "qualities": "Qualities",
+        "weapon": {
+          "damage": "Damage",
+          "hands": "Hands",
+          "melee": "Melee",
+          "precision": "Precision",
+          "ranged": "Ranged",
+          "rangeType": "Type",
+          "rareQualities": {
+            "breaks": "Breaks",
+            "equipFreeHand": "Always Equipped in Free Hand",
+            "magical": "Magical",
+            "hunting": "Hunting",
+            "piercing": "Piercing",
+            "doubleHunting": "Double Hunting",
+            "multi": "Multi",
+            "status": "Status",
+            "statusPlus": "Status Plus",
+            "bonusMagic": "Magic Bonus",
+            "bonusPrecision": "Precision Bonus",
+            "increasedDamage": "Extra Damage",
+            "extraHand": "Heavy Weight",
+            "lightened": "Light Weight",
+            "antiStatus": "Antistatus",
+            "resistance": "Resistance",
+            "amulet": "Amulet",
+            "bulwark": "Bulwark",
+            "doubleResistance": "Doube Resistance",
+            "swordBreak": "Swordbreaking",
+            "immunity": "Immunity",
+            "omnishield": "Omnishield",
+            "perfectHealth": "Perfect Health"
+          }
+        }
+      }
+    }
+  }
 }

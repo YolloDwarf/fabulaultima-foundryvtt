@@ -48,7 +48,8 @@
     text-align: left;
     align-items: center;
     display: flex;
-    h3, h4 {
+    h3,
+    h4 {
       margin: 0;
       white-space: nowrap;
       overflow-x: hidden;
@@ -72,7 +73,9 @@
     align-items: center;
     padding: 0 2px; // to align with the header border
     border-bottom: 1px solid $c-faint;
-    &:last-child { border-bottom: none; }
+    &:last-child {
+      border-bottom: none;
+    }
     .item-name {
       color: $c-dark;
       .item-image {
@@ -113,8 +116,54 @@
   }
 }
 
-/* Example style for Boilerplate (can be removed if not needed) */
+/* Example style for FabulaUltima (can be removed if not needed) */
 .item-formula {
   flex: 0 0 200px;
   padding: 0 8px;
+}
+
+/* ------------------------------------ */
+/*  Custom                              */
+/* ------------------------------------ */
+.item-body {
+  margin-top: 16px;
+
+  .equipment-top {
+    border: 1px solid rgb(43, 74, 66);
+    background: rgb(221, 233, 222);
+    background: linear-gradient(
+      60deg,
+      rgba(221, 233, 222, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+
+    table {
+      margin: 0;
+      border: none;
+    }
+
+    th:first-child,
+    td:first-child {
+      padding-left: 4px;
+    }
+
+    th:last-child,
+    td:last-child {
+      padding-right: 4px;
+    }
+
+    .equipment-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .equipment-header {
+      background-color: rgb(43, 74, 66);
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
 }

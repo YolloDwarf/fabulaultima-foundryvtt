@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "fabula-ultima",
   "version": "1.0.0",
-  "description": "CSS compiler for the Boilerplate system",
+  "description": "CSS compiler for the Fabula Ultima system",
   "scripts": {
     "build": "gulp build",
     "compile": "gulp css",
@@ -11,7 +11,7 @@
   "browserslist": [
     "last 3 versions"
   ],
-  "author": "John Doe",
+  "author": "YollothwDwarf",
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -19,6 +19,9 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }

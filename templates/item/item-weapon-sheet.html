@@ -1,0 +1,89 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img
+      class="profile-img"
+      src="{{item.img}}"
+      data-edit="img"
+      title="{{item.name}}"
+    />
+    <div class="header-fields">
+      <h1 class="charname">
+        <input
+          name="name"
+          type="text"
+          value="{{item.name}}"
+          placeholder="Name"
+        />
+      </h1>
+    </div>
+  </header>
+
+  {{!-- Sheet --}}
+  <section class="item-body">
+    <div class="equipment-top">
+      <table>
+        <tr class="equipment-header">
+          <th>{{localize "FABULAULTIMA.item.equipment.cost"}}</th>
+          <th>{{localize "FABULAULTIMA.item.equipment.weapon.precision"}}</th>
+          <th>{{localize "FABULAULTIMA.item.equipment.weapon.damage"}}</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="equipment-cell">
+              <input
+                name="data.cost"
+                type="text"
+                value="{{item.cost}}"
+                data-dtype="Number"
+              /><span>z</span>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="data.precision1">
+                {{#select data.precision1}} {{#each config.attrs as |name
+                attribute| }}
+                <option value="{{attribute}}">{{name}}</option>
+                {{/each}} {{/select}}
+              </select>
+              <span>+</span>
+              <select name="data.precision2">
+                {{#select data.precision2}} {{#each config.attrs as |name
+                attribute| }}
+                <option value="{{attribute}}">{{name}}</option>
+                {{/each}} {{/select}}
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="data.damageType">
+                {{#select data.damageType}} {{#each config.damageTypes as |name
+                type| }}
+                <option value="{{type}}">{{name}}</option>
+                {{/each}} {{/select}}
+              </select>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="weapon-qualities">
+      <div class="equipment-cell">
+        <span>{{localize "FABULAULTIMA.item.equipment.weapon.hands"}}</span>
+        <select name="data.hands">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div class="equipment-cell">
+        <span>{{localize "FABULAULTIMA.item.equipment.weapon.rangeType"}}</span>
+        <select name="data.type">
+          <option value="1"></option>
+          <option value="2">2</option>
+        </select>
+      </div>
+    </div>
+  </section>
+</form>

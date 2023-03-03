@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "npc", "villain"],
     "templates": {
       "base": {
         "health": {
@@ -50,11 +50,28 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": [
+      "class",
+      "item",
+      "weapon",
+      "shield",
+      "armor",
+      "accessory",
+      "feature",
+      "spell",
+      "ritual"
+    ],
     "templates": {
       "base": {
         "description": ""
+      },
+      "equipment": {
+        "cost": 0,
+        "qualitites": []
       }
+    },
+    "class": {
+      "templates": ["class"]
     },
     "item": {
       "templates": ["base"],
@@ -62,12 +79,65 @@
       "weight": 0,
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
+    "weapon": {
+      "templates": ["equipment"],
+      "precision1": "@des",
+      "precision2": "@vig",
+      "damage": {
+        "type": "physical",
+        "value": "@tm + 6"
+      },
+      "hands": 1,
+      "type": "melee",
+      "breaks": false,
+      "equipFreeHand": true,
+      "magical": false,
+      "hunting": null,
+      "piercing": false,
+      "doubleHunting": null,
+      "multi": false,
+      "status": null,
+      "statusPlus": null,
+      "bonusMagic": false,
+      "bonusPrecision": false,
+      "increasedDamage": false,
+      "extraHand": false,
+      "lightened": false,
+      "antiStatus": null,
+      "resistance": null,
+      "amulet": false,
+      "bulwark": false,
+      "doubleResistance": null,
+      "swordBreak": false,
+      "immunity": null,
+      "omnishield": false,
+      "perfectHealth": false
+    },
+    "armor": {
+      "templates": ["equipment"],
+      "defense": "10",
+      "magicDefense": "@int",
+      "initiative": -1
+    },
+    "shield": {
+      "templates": ["equipment"],
+      "defense": "10",
+      "magicDefense": "@int",
+      "initiative": -1,
+      "hands": 1
+    },
+    "accessory": {
+      "templates": ["equipment"]
+    },
     "feature": {
       "templates": ["base"]
     },
     "spell": {
       "templates": ["base"],
       "spellLevel": 1
+    },
+    "ritual": {
+      "templates": ["base"]
     }
   }
 }
