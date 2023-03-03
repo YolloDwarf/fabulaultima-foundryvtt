@@ -1,6 +1,6 @@
 import { FUItems } from "./configs/items-config.mjs";
 
-export const FABULAULTIMA = {
+export const FU = {
   items: FUItems,
 };
 

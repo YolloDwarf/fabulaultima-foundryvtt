@@ -1,12 +1,13 @@
 // Import document classes.
-import { FabulaUltimaActor } from "./documents/actor.mjs";
-import { FabulaUltimaItem } from "./documents/item.mjs";
+import { FUActor } from "./documents/actor.mjs";
+import { FUItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { FabulaUltimaActorSheet } from "./sheets/actor-sheet.mjs";
-import { FabulaUltimaItemSheet } from "./sheets/items/item-sheet.mjs";
-import { FabulaUltimaWeaponSheet } from "./sheets/items/item-weapon-sheet.mjs";
+import { FUActorSheet } from "./sheets/actor-sheet.mjs";
+import { FUItemSheet } from "./sheets/items/item-sheet.mjs";
+import { FUWeaponSheet } from "./sheets/items/item-weapon-sheet.mjs";
+import { FUArmorSheet } from "./sheets/items/item-armor-sheet.mjs";
 // Import helper/utility classes and constants.
-import { FABULAULTIMA } from "./helpers/config.mjs";
+import { FU } from "./helpers/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 
 /* -------------------------------------------- */
@@ -17,13 +18,13 @@ Hooks.once("init", async function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.fabulaUltima = {
-    FabulaUltimaActor,
-    FabulaUltimaItem,
+    FUActor,
+    FUItem,
     rollItemMacro,
   };
 
   // Add custom constants for configuration.
-  CONFIG.FABULAULTIMA = FABULAULTIMA;
+  CONFIG.FU = FU;
 
   /**
    * Set an initiative formula for the system
@@ -35,19 +36,19 @@ Hooks.once("init", async function () {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = FabulaUltimaActor;
-  CONFIG.Item.documentClass = FabulaUltimaItem;
+  CONFIG.Actor.documentClass = FUActor;
+  CONFIG.Item.documentClass = FUItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("fabulaUltima", FabulaUltimaActorSheet, {
+  Actors.registerSheet("fabulaUltima", FUActorSheet, {
     makeDefault: true,
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("fabulaUltima", FabulaUltimaItemSheet, {
+  Items.registerSheet("fabulaUltima", FUItemSheet, {
     makeDefault: true,
   });
-  Items.registerSheet("fabulaUltima", FabulaUltimaWeaponSheet, {
+  Items.registerSheet("fabulaUltima", FUWeaponSheet, {
     makeDefault: true,
   });
 

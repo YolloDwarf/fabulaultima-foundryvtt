@@ -115,10 +115,38 @@
           <option value="{{qualityId}}">{{quality.name}}</option>
           {{/each}} {{/select}}
         </select>
-        {{#if config.items.weaponQualities[@index].type }} {{#if
-        config.items.weaponQualities[@index].type === 'select'}} {{#else}}
+
+        {{#if config.items.weaponQualities[index].type }} {{#if
+        config.items.weaponQualities[index].type === 'select'}}
+        <select name="{{itemQuality.value}}">
+          {{#select itemQuality.value}} {{#each config[quality.options] as
+          |option optionId| }}
+          <option value="{{optionId}}">{{option}}</option>
+          {{/each}} {{/select}}
+        </select>
+        {{#if config.items.weaponQualities[index].multiChoice}}<select
+          name="{{itemQuality.extraValue}}"
+        >
+          {{#select itemQuality.extraValue}} {{#each config[quality.options] as
+          |option optionId| }}
+          <option value="{{optionId}}">{{option}}</option>
+          {{/each}} {{/select}}</select
+        >{{/if}} {{/if}} {{#if config.items.weaponQualities[@index].type ===
+        'text'}}
         <input
-          name="{{index}}-amount"
+          name="{{itemQuality.value}}"
+          type="text"
+          value="{{itemQuality.value}}"
+        />
+        {{#if config.items.weaponQualities[index].multiChoice}}
+        <input
+          name="{{itemQuality.extraValue}}"
+          type="text"
+          value="{{itemQuality.extraValue}}"
+        />{{/if}} {{/if}} {{#if config.items.weaponQualities[@index].type ===
+        'number'}}
+        <input
+          name="{{itemQuality.value}}"
           type="number"
           value="{{itemQuality.value}}"
           data-dtype="Number"

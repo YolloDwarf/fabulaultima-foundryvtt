@@ -1,10 +1,10 @@
 import { FUItemSheet } from "./item-sheet.mjs";
 
-export class FUWeaponSheet extends FUItemSheet {
+export class FUArmorSheet extends FUItemSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["fabulaUltima", "sheet", "item", "weapon"],
+      classes: ["fabulaUltima", "sheet", "item", "armor"],
       width: 520,
       height: 480,
       tabs: [

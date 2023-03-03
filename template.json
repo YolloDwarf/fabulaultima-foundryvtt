@@ -1,55 +1,123 @@
 {
   "Actor": {
-    "types": ["character", "npc", "villain"],
-    "templates": {
-      "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
-        "biography": ""
-      }
-    },
     "character": {
-      "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1
-        }
-      },
       "abilities": {
-        "str": {
-          "value": 10
-        },
-        "dex": {
+        "cha": {
           "value": 10
         },
         "con": {
           "value": 10
         },
+        "dex": {
+          "value": 10
+        },
         "int": {
+          "value": 10
+        },
+        "str": {
           "value": 10
         },
         "wis": {
           "value": 10
-        },
-        "cha": {
+        }
+      },
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "templates": [
+        "base"
+      ]
+    },
+    "npc": {
+      "cr": 0,
+      "templates": [
+        "base"
+      ]
+    },
+    "templates": {
+      "base": {
+        "biography": "",
+        "health": {
+          "max": 10,
+          "min": 0,
           "value": 10
+        },
+        "power": {
+          "max": 5,
+          "min": 0,
+          "value": 5
         }
       }
     },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
-    }
+    "types": [
+      "character",
+      "npc",
+      "villain"
+    ]
   },
   "Item": {
+    "accessory": {
+      "templates": [
+        "equipment"
+      ]
+    },
+    "armor": {
+      "defense": "10",
+      "initiative": -1,
+      "magicDefense": "@int",
+      "templates": [
+        "equipment"
+      ]
+    },
+    "class": {
+      "templates": [
+        "class"
+      ]
+    },
+    "feature": {
+      "templates": [
+        "base"
+      ]
+    },
+    "item": {
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)",
+      "quantity": 1,
+      "templates": [
+        "base"
+      ],
+      "weight": 0
+    },
+    "ritual": {
+      "templates": [
+        "base"
+      ]
+    },
+    "shield": {
+      "defense": "10",
+      "hands": 1,
+      "initiative": -1,
+      "magicDefense": "@int",
+      "templates": [
+        "equipment"
+      ]
+    },
+    "spell": {
+      "spellLevel": 1,
+      "templates": [
+        "base"
+      ]
+    },
+    "templates": {
+      "base": {
+        "description": ""
+      },
+      "equipment": {
+        "cost": 0,
+        "qualitites": []
+      }
+    },
     "types": [
       "class",
       "item",
@@ -61,84 +129,42 @@
       "spell",
       "ritual"
     ],
-    "templates": {
-      "base": {
-        "description": ""
-      },
-      "equipment": {
-        "cost": 0,
-        "qualitites": []
-      }
-    },
-    "class": {
-      "templates": ["class"]
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
     "weapon": {
-      "templates": ["equipment"],
-      "precision1": "@des",
-      "precision2": "@vig",
+      "amulet": false,
+      "antiStatus": null,
+      "bonusMagic": false,
+      "bonusPrecision": false,
+      "breaks": false,
+      "bulwark": false,
       "damage": {
         "type": "physical",
         "value": "@tm + 6"
       },
-      "hands": 1,
-      "rangeType": "melee",
-      "type": "sword",
-      "breaks": false,
-      "equipFreeHand": true,
-      "magical": false,
-      "hunting": null,
-      "piercing": false,
       "doubleHunting": null,
+      "doubleResistance": null,
+      "equipFreeHand": true,
+      "extraHand": false,
+      "hands": 1,
+      "hunting": null,
+      "immunity": null,
+      "increasedDamage": false,
+      "lightened": false,
+      "magical": false,
       "multi": 0,
+      "omnishield": false,
+      "perfectHealth": false,
+      "piercing": false,
+      "precision1": "@des",
+      "precision2": "@vig",
+      "rangeType": "melee",
+      "resistance": null,
       "status": null,
       "statusPlus": null,
-      "bonusMagic": false,
-      "bonusPrecision": false,
-      "increasedDamage": false,
-      "extraHand": false,
-      "lightened": false,
-      "antiStatus": null,
-      "resistance": null,
-      "amulet": false,
-      "bulwark": false,
-      "doubleResistance": null,
       "swordBreak": false,
-      "immunity": null,
-      "omnishield": false,
-      "perfectHealth": false
-    },
-    "armor": {
-      "templates": ["equipment"],
-      "defense": "10",
-      "magicDefense": "@int",
-      "initiative": -1
-    },
-    "shield": {
-      "templates": ["equipment"],
-      "defense": "10",
-      "magicDefense": "@int",
-      "initiative": -1,
-      "hands": 1
-    },
-    "accessory": {
-      "templates": ["equipment"]
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
-    },
-    "ritual": {
-      "templates": ["base"]
+      "templates": [
+        "equipment"
+      ],
+      "type": "sword"
     }
   }
 }

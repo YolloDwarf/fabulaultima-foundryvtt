@@ -28,8 +28,8 @@ FUItems.weaponQualities = {
   },
   hunting: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.hunting"),
-    type: "select",
-    options: "config.creatureTypes",
+    type: "text",
+    options: "creatureTypes",
   },
   piercing: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.piercing"),
@@ -38,24 +38,24 @@ FUItems.weaponQualities = {
     name: game.i18n.localize(
       "FUItems.item.equipment.qualitiesList.doubleHunting"
     ),
-    type: "select",
-    options: "config.creatureTypes",
-    amount: 2,
+    type: "text",
+    options: "creatureTypes",
+    multiChoice: true,
   },
   multi: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.multi"),
     type: "number",
   },
   status: {
-    name: game.i18n.localize("FUItems.item.equipment.qualitiesList.status"),
+    name: game.i18n.localize("FUItems.item.equipment.qualitiesList.statuses"),
     type: "select",
-    options: "config.status",
+    options: "statuses",
   },
   statusPlus: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.statusPlus"),
     type: "select",
-    options: "config.status",
-    amount: 2,
+    options: "statuses",
+    multiChoice: true,
   },
   bonusMagic: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.magicBonus"),
@@ -84,12 +84,12 @@ FUItems.weaponQualities = {
   antiStatus: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.antiStatus"),
     type: "select",
-    options: "config.status",
+    options: "statuses",
   },
   resistance: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.resistance"),
     type: "select",
-    options: "config.damageTypes",
+    options: "damageTypes",
   },
   amulet: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.amulet"),
@@ -102,8 +102,8 @@ FUItems.weaponQualities = {
       "FUItems.item.equipment.qualitiesList.doubleResistance"
     ),
     type: "select",
-    options: "config.damageTypes",
-    amount: 2,
+    options: "damageTypes",
+    multiChoice: true,
   },
   swordBreak: {
     name: game.i18n.localize(
@@ -113,7 +113,7 @@ FUItems.weaponQualities = {
   immunity: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.immunity"),
     type: "select",
-    options: "config.damageType",
+    options: "damageTypes",
   },
   omnishield: {
     name: game.i18n.localize("FUItems.item.equipment.qualitiesList.omnishield"),

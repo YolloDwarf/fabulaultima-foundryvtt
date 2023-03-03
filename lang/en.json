@@ -24,6 +24,11 @@
     "item": {
       "equipment": {
         "addQuality": "Add Quality",
+        "armor": {
+          "defense": "Defense",
+          "magicalDef": "Magical Defense",
+          "initiativeMod": "Initiative Modifier"
+        },
         "cost": "Cost",
         "qualities": "Qualities",
         "qualitiesList": {
