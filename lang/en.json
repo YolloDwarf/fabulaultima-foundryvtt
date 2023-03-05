@@ -25,45 +25,77 @@
       "equipment": {
         "addQuality": "Add Quality",
         "armor": {
+          "base10": "10",
+          "base11": "11",
+          "base12": "12",
+          "class": "Class",
           "defense": "Defense",
-          "magicalDef": "Magical Defense",
-          "initiativeMod": "Initiative Modifier"
+          "dex": "DEX Size",
+          "dex1": "DEX Size + 1",
+          "initiativeMod": "Initiative Modifier",
+          "int": "INT Size",
+          "int1": "INT Size + 1",
+          "int2": "INT Size + 2",
+          "magicDefense": "Magical Defense",
+          "none": "0",
+          "plusTwo": "+2"
         },
         "cost": "Cost",
+        "equipmentClass": {
+          "martial": "Martial",
+          "simple": "Simple"
+        },
         "qualities": "Qualities",
         "qualitiesList": {
+          "alwaysEquipped": "On Free Hands",
           "amulet": "Amulet",
           "antiStatus": "Antistatus",
-          "bonusMagic": "Magic Bonus",
-          "bonusPrecision": "Precision Bonus",
           "breaks": "Breaks",
           "bulwark": "Bulwark",
+          "custom": "Custom Quality",
+          "damageChanges": "Damage Conversion",
           "doubleHunting": "Double Hunting",
-          "doubleResistance": "Doube Resistance",
+          "doubleResistance": "Double Resistance",
           "equipFreeHand": "Always Equipped in Free Hand",
-          "extraHand": "Heavy Weight",
+          "extraDamage": "Increased Damage",
+          "healingPlus": "Healing Plus",
+          "heavyWeight": "Heavy Weight",
           "hunting": "Hunting",
           "immunity": "Immunity",
           "increasedDamage": "Extra Damage",
-          "lightened": "Light Weight",
+          "initiativePlus": "Initiative Plus",
+          "lightWeight": "Light Weight",
           "magical": "Magical",
+          "magicBonus": "Magic Bonus",
+          "magicPlus": "Magic Plus",
           "multi": "Multi",
           "omnishield": "Omnishield",
           "perfectHealth": "Perfect Health",
           "piercing": "Piercing",
+          "precisionBonus": "Precision Bonus",
+          "precisionPlus": "Precision Plus",
           "resistance": "Resistance",
+          "spellPlus": "Spell Plus",
           "status": "Status",
           "statusPlus": "Status Plus",
-          "swordBreak": "Swordbreaking"
+          "swordBreak": "Swordbreaking",
+          "vitalityPlus": "Vitality Plus",
+          "weaponPlus": "Weapon Plus"
         },
+        "qualityLabel": "Name",
+        "removeQuality": "Remove Quality",
         "weapon": {
-          "1hand": "One-Handed",
-          "2hands": "Two-Handed",
+          "class": "Class",
           "damage": "Damage",
+          "damageType": "Damage Type",
+          "hands": "Hands",
           "melee": "Melee",
+          "oneHand": "One-Handed",
           "precision": "Precision",
           "ranged": "Ranged",
-          "rangeType": "Type"
+          "rangeType": "Range Type",
+          "twoHands": "Two-Handed",
+          "type": "Type"
         },
         "weaponTypes": {
           "arcane": "Arcane",
@@ -77,7 +109,19 @@
           "sword": "Sword",
           "thrown": "Thrown"
         }
-      }
+      },
+      "itemType": {
+        "weapon": "Weapon"
+      },
+      "selectQuality": "Select a quality"
+    },
+    "statuses": {
+      "confused": "Confused",
+      "furious": "Furious",
+      "poisoned": "Poisoned",
+      "shaken": "Shaken",
+      "slow": "Slow",
+      "weak": "Weak"
     }
   }
 }

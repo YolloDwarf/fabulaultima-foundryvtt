@@ -26,15 +26,11 @@
           "value": 1
         }
       },
-      "templates": [
-        "base"
-      ]
+      "templates": ["base"]
     },
     "npc": {
       "cr": 0,
-      "templates": [
-        "base"
-      ]
+      "templates": ["base"]
     },
     "templates": {
       "base": {
@@ -51,71 +47,49 @@
         }
       }
     },
-    "types": [
-      "character",
-      "npc",
-      "villain"
-    ]
+    "types": ["character", "npc", "villain"]
   },
   "Item": {
     "accessory": {
-      "templates": [
-        "equipment"
-      ]
+      "templates": ["equipment"]
     },
     "armor": {
       "defense": "10",
-      "initiative": -1,
+      "initiativeMod": -1,
       "magicDefense": "@int",
-      "templates": [
-        "equipment"
-      ]
+      "templates": ["equipment"]
     },
     "class": {
-      "templates": [
-        "class"
-      ]
+      "templates": ["class"]
     },
     "feature": {
-      "templates": [
-        "base"
-      ]
+      "templates": ["base"]
     },
     "item": {
       "formula": "d20 + @str.mod + ceil(@lvl / 2)",
       "quantity": 1,
-      "templates": [
-        "base"
-      ],
+      "templates": ["base"],
       "weight": 0
     },
     "ritual": {
-      "templates": [
-        "base"
-      ]
+      "templates": ["base"]
     },
     "shield": {
-      "defense": "10",
-      "hands": 1,
-      "initiative": -1,
-      "magicDefense": "@int",
-      "templates": [
-        "equipment"
-      ]
+      "defense": "+2",
+      "initiativeMod": 0,
+      "magicDefense": "0",
+      "templates": ["equipment"]
     },
     "spell": {
       "spellLevel": 1,
-      "templates": [
-        "base"
-      ]
+      "templates": ["base"]
     },
     "templates": {
       "base": {
         "description": ""
       },
       "equipment": {
-        "cost": 0,
-        "qualitites": []
+        "cost": 0
       }
     },
     "types": [
@@ -130,40 +104,15 @@
       "ritual"
     ],
     "weapon": {
-      "amulet": false,
-      "antiStatus": null,
-      "bonusMagic": false,
-      "bonusPrecision": false,
-      "breaks": false,
-      "bulwark": false,
       "damage": {
         "type": "physical",
         "value": "@tm + 6"
       },
-      "doubleHunting": null,
-      "doubleResistance": null,
-      "equipFreeHand": true,
-      "extraHand": false,
       "hands": 1,
-      "hunting": null,
-      "immunity": null,
-      "increasedDamage": false,
-      "lightened": false,
-      "magical": false,
-      "multi": 0,
-      "omnishield": false,
-      "perfectHealth": false,
-      "piercing": false,
       "precision1": "@des",
       "precision2": "@vig",
       "rangeType": "melee",
-      "resistance": null,
-      "status": null,
-      "statusPlus": null,
-      "swordBreak": false,
-      "templates": [
-        "equipment"
-      ],
+      "templates": ["equipment"],
       "type": "sword"
     }
   }

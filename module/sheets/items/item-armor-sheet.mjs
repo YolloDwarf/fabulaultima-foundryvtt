@@ -1,14 +1,14 @@
 import { FUItemSheet } from "./item-sheet.mjs";
 
-export class FUWeaponSheet extends FUItemSheet {
+export class FUArmorSheet extends FUItemSheet {
   _newQuality = null;
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["fabulaUltima", "sheet", "item", "weapon"],
-      width: 520,
-      height: 480,
+      classes: ["fabulaUltima", "sheet", "item", "armor"],
+      width: 640,
+      height: 360,
       tabs: [
         {
           navSelector: ".sheet-tabs",
@@ -47,7 +47,7 @@ export class FUWeaponSheet extends FUItemSheet {
     const qualitySelect = html.find(".new-quality");
     qualitySelect.change((event) => {
       this._newQuality =
-        this.getData().config.item.weaponQualities[event.target.value];
+        this.getData().config.item.defensiveQualities[event.target.value];
       html.find("[name*='quality.value']").remove();
       if (this._newQuality?.type) {
         let inputs = "";
@@ -110,7 +110,7 @@ export class FUWeaponSheet extends FUItemSheet {
     const quality = html.find(".new-quality").val();
     const value1 = html.find('[name="quality.value1"]').val();
     const value2 = html.find('[name="quality.value2"]').val();
-    const qualityData = this.getData().config.item.weaponQualities[quality];
+    const qualityData = this.getData().config.item.defensiveQualities[quality];
 
     let flagValue = {
       label: qualityData.name

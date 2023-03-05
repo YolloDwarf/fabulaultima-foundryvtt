@@ -3,12 +3,14 @@ import { FUActor } from "./documents/actor.mjs";
 import { FUItem } from "./documents/item.mjs";
 // Import sheet classes.
 import { FUActorSheet } from "./sheets/actor-sheet.mjs";
+import { FUArmorSheet } from "./sheets/items/item-armor-sheet.mjs";
 import { FUItemSheet } from "./sheets/items/item-sheet.mjs";
 import { FUWeaponSheet } from "./sheets/items/item-weapon-sheet.mjs";
-import { FUArmorSheet } from "./sheets/items/item-armor-sheet.mjs";
 // Import helper/utility classes and constants.
-import { FU } from "./helpers/config.mjs";
+import { FU } from "./helpers/configs/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
+import { FUShieldSheet } from "./sheets/items/item-shield-sheet.mjs";
+import { FUAccessorySheet } from "./sheets/items/item-accessory-sheet.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -47,9 +49,23 @@ Hooks.once("init", async function () {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("fabulaUltima", FUItemSheet, {
     makeDefault: true,
+    types: ["item"],
   });
   Items.registerSheet("fabulaUltima", FUWeaponSheet, {
     makeDefault: true,
+    types: ["weapon"],
+  });
+  Items.registerSheet("fabulaUltima", FUArmorSheet, {
+    makeDefault: true,
+    types: ["armor"],
+  });
+  Items.registerSheet("fabulaUltima", FUShieldSheet, {
+    makeDefault: true,
+    types: ["shield"],
+  });
+  Items.registerSheet("fabulaUltima", FUAccessorySheet, {
+    makeDefault: true,
+    types: ["accessory"],
   });
 
   // Preload Handlebars templates.

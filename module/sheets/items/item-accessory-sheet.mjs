@@ -1,12 +1,12 @@
 import { FUItemSheet } from "./item-sheet.mjs";
 
-export class FUWeaponSheet extends FUItemSheet {
+export class FUAccessorySheet extends FUItemSheet {
   _newQuality = null;
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["fabulaUltima", "sheet", "item", "weapon"],
+      classes: ["fabulaUltima", "sheet", "item", "accessory"],
       width: 520,
       height: 480,
       tabs: [
@@ -26,7 +26,7 @@ export class FUWeaponSheet extends FUItemSheet {
     // return `${path}/item-sheet.html`;
 
     // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
+    // unique item sheet by type, like `accessory-sheet.html`.
     return `${path}/item-${this.item.type}-sheet.hbs`;
   }
 
@@ -47,7 +47,7 @@ export class FUWeaponSheet extends FUItemSheet {
     const qualitySelect = html.find(".new-quality");
     qualitySelect.change((event) => {
       this._newQuality =
-        this.getData().config.item.weaponQualities[event.target.value];
+        this.getData().config.item.accessoryQualities[event.target.value];
       html.find("[name*='quality.value']").remove();
       if (this._newQuality?.type) {
         let inputs = "";
@@ -71,6 +71,13 @@ export class FUWeaponSheet extends FUItemSheet {
             } />
         `;
           }
+          qualitySelect.after(inputs);
+        } else if (this._newQuality.type === "textarea") {
+          inputs = ` <textarea class="quality-value" name="quality.value1" type=${
+            this._newQuality.type
+          } ${
+            this._newQuality.type === "number" ? 'data-dtype="Number"' : ""
+          } ></textarea>`;
           qualitySelect.after(inputs);
         } else if (this._newQuality.type === "select") {
           let options = "";
@@ -110,7 +117,7 @@ export class FUWeaponSheet extends FUItemSheet {
     const quality = html.find(".new-quality").val();
     const value1 = html.find('[name="quality.value1"]').val();
     const value2 = html.find('[name="quality.value2"]').val();
-    const qualityData = this.getData().config.item.weaponQualities[quality];
+    const qualityData = this.getData().config.item.accessoryQualities[quality];
 
     let flagValue = {
       label: qualityData.name

@@ -1,0 +1,211 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img
+      class="item-img"
+      src="{{item.img}}"
+      data-edit="img"
+      title="{{item.name}}"
+    />
+    <div class="header-fields">
+      <h1 class="charname">
+        <input
+          name="name"
+          type="text"
+          value="{{item.name}}"
+          placeholder="Name"
+        />
+      </h1>
+    </div>
+  </header>
+
+  {{! Sheet }}
+  <section class="item-body">
+    <div class="equipment-table">
+      <table>
+        <tr class="equipment-header">
+          <th>{{localize "FU.item.equipment.cost"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.precision"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.damage"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.damageType"}}</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="equipment-cell item-cost">
+              {{numberInput system.cost name="system.cost" placeholder="0"}}
+              <span>z</span>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.precision1">
+                {{#select system.precision1}}
+                  {{#each config.attrs as |name attribute|}}
+                    <option value="{{localize attribute}}">{{localize
+                        name
+                      }}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+              <span>+</span>
+              <select name="system.precision2">
+                {{#select system.precision2}}
+                  {{#each config.attrs as |name attribute|}}
+                    <option value="{{attribute}}">{{localize name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell item-dmg fabulaUltima-wrapper">
+              <span class="fabulaUltima-wrapped">
+                <span>TM +</span>
+                {{numberInput
+                  system.damage
+                  name="system.damage"
+                  placeholder="0"
+                }}
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.damageType">
+                {{#select system.damageType}}
+                  {{#each config.damageTypes as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="equipment-table">
+      <table>
+        <tr class="equipment-header">
+          <th>{{localize "FU.item.equipment.weapon.class"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.type"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.hands"}}</th>
+          <th>{{localize "FU.item.equipment.weapon.rangeType"}}</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.class">
+                {{#select system.class}}
+                  {{#each config.item.weaponClass as |name attribute|}}
+                    <option value="{{attribute}}">{{localize name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.type">
+                {{#select system.type}}
+                  {{#each config.item.weaponTypes as |name attribute|}}
+                    <option value="{{attribute}}">{{localize name}}</option>
+                  {{/each}}
+                {{/select}}
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.hands">
+                <option value="1">{{localize
+                    "FU.item.equipment.weapon.oneHand"
+                  }}</option>
+                <option value="2">{{localize
+                    "FU.item.equipment.weapon.twoHands"
+                  }}</option>
+              </select>
+            </div>
+          </td>
+          <td>
+            <div class="equipment-cell">
+              <select name="system.rangeType">
+                <option value="melee">{{localize
+                    "FU.item.equipment.weapon.melee"
+                  }}</option>
+                <option value="ranged">{{localize
+                    "FU.item.equipment.weapon.ranged"
+                  }}</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="item-qualities">
+      <div class="qualities-header">
+        <span class="qualities-title">{{localize
+            "FU.item.equipment.qualities"
+          }}</span>
+      </div>
+
+      <div class="qualities-list">
+        {{! Qualities  }}
+        {{#each flags.fabulaUltima.qualities as |quality id|}}
+          <div class="quality-element">
+            <i class="star fa-solid fa-star"></i>
+            <span class="quality-name">{{localize quality.label}}</span>
+            {{#if quality.value1}}
+              <span class="fabulaUltima-wrapper">
+                {{#if quality.value1Name}}<span
+                    class="fabulaUltima-wrapped"
+                  >{{localize quality.value1Name}}</span>
+                {{else}}<span
+                    class="fabulaUltima-wrapped"
+                  >{{quality.value1}}</span>
+                {{/if}}</span>
+            {{/if}}
+            {{#if quality.value2}}
+              <span class="fabulaUltima-wrapper">
+                {{#if quality.value2Name}}
+                  <span class="fabulaUltima-wrapped">{{localize
+                      quality.value2Name
+                    }}</span>
+                {{else}}<span
+                    class="fabulaUltima-wrapped"
+                  >{{quality.value2}}</span>
+                {{/if}}
+              </span>
+            {{/if}}
+            <span class="grow1"></span>
+            <a
+              id="{{id}}"
+              class="item-create remove-quality"
+              title="{{localize 'FU.item.equipment.removeQuality'}}"
+            >
+              <i class="trash fa-solid fa-trash"></i>
+            </a>
+          </div>
+        {{/each}}
+
+        <div class="qualities-selector">
+          <select class="new-quality" name="newQuality">
+            {{#select newQuality}}
+              <option value="">{{localize "FU.item.selectQuality"}}</option>
+              {{#each config.item.weaponQualities as |quality attribute|}}
+                <option value="{{attribute}}">{{localize quality.name}}</option>
+              {{/each}}{{/select}}
+          </select>
+          <a
+            class="item-create add-quality"
+            style="visibility: hidden"
+            title="{{localize 'FU.item.equipment.addQuality'}}"
+          >
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</form>

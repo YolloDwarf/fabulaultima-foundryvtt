@@ -2,7 +2,7 @@
   "id": "fabulaUltima",
   "title": "Fabula Ultima",
   "description": "The Fabula Ultima system for FoundryVTT!",
-  "author": "YollotheDwarf",
+  "authors": [{ "name": "YollotheDwarf" }],
   "version": "0.0.1",
   "compatibility": {
     "minimum": 10,
@@ -35,3 +35,4 @@
   "license": "LICENSE.txt",
   "changelog": "CHANGELOG.md"
 }
+

@@ -1,5 +1,14 @@
 .window-app {
   font-family: $font-primary;
+
+  .window-content {
+    background: rgb(201, 224, 203);
+    background: linear-gradient(
+      60deg,
+      rgb(201, 224, 203) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
 }
 
 .rollable {

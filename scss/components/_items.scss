@@ -23,6 +23,16 @@
 /* ----------------------------------------- */
 /*  Items Lists                              */
 /* ----------------------------------------- */
+.sheet-header {
+  .item-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50px;
+    flex: 0 0 50px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+}
 
 .items-list {
   list-style: none;
@@ -125,17 +135,23 @@
 /* ------------------------------------ */
 /*  Custom                              */
 /* ------------------------------------ */
+.fabulaUltima-wrapper {
+  margin: 0 8px;
+  background-color: rgb(43, 74, 66);
+  padding: 0 4px;
+
+  .fabulaUltima-wrapped {
+    border-radius: 8px;
+    background-color: rgb(218, 236, 219);
+    padding: 0 8px;
+  }
+}
+
 .item-body {
   margin-top: 16px;
 
-  .equipment-top {
+  .equipment-table {
     border: 1px solid rgb(43, 74, 66);
-    background: rgb(221, 233, 222);
-    background: linear-gradient(
-      60deg,
-      rgba(221, 233, 222, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
 
     table {
       margin: 0;
@@ -166,4 +182,118 @@
       text-transform: uppercase;
     }
   }
+
+  .item-dmg,
+  .item-cost,
+  .item-input {
+    align-items: center;
+    justify-content: center;
+
+    input {
+      width: 75px;
+    }
+  }
+
+  .item-cost {
+    input {
+      text-align: right;
+    }
+  }
+
+  .item-input {
+    input {
+      text-align: center;
+    }
+  }
+
+  .item-dmg {
+    width: calc(100% - 12px);
+    padding: 0;
+    margin: 0;
+
+    input {
+      width: 25px;
+      text-align: center;
+    }
+  }
+
+  .item-qualities {
+    .qualities-header {
+      background-color: rgb(43, 74, 66);
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .accessory-cost {
+      margin-left: auto;
+      justify-self: end;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 4px;
+
+      input {
+        width: 75px;
+        background-color: rgb(218, 236, 219);
+        text-align: right;
+      }
+    }
+
+    .qualities-list {
+      border: 1px solid rgb(43, 74, 66);
+      display: flex;
+      flex-direction: column;
+
+      .qualities-selector {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 4px 8px;
+
+        .add-quality {
+          background-color: rgb(43, 74, 66);
+          color: white;
+          border-radius: 4px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      }
+
+      input.quality-value {
+        width: auto;
+      }
+
+      .quality-element {
+        border-bottom: 1px solid rgb(43, 74, 66);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px;
+
+        .star {
+          color: rgb(184, 35, 21);
+        }
+
+        .trash {
+          justify-self: end;
+          color: rgb(43, 74, 66);
+        }
+
+        .quality-name {
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
+
