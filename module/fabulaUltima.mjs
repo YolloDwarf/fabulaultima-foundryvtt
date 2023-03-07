@@ -75,6 +75,10 @@ Handlebars.registerHelper("toLowerCase", function (str) {
   return str.toLowerCase();
 });
 
+Handlebars.registerHelper("filterQualities", function (qualities, type) {
+  return qualities.filter((quality) => quality.availableFor.includes(type));
+});
+
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
