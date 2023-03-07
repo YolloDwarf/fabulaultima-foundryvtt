@@ -47,3 +47,15 @@ FU.statuses = {
   shaken: "FU.statuses.shaken",
 };
 preLocalize("statuses", { key: "label", sort: true });
+
+FU.species = {
+  beast: "FU.speciesType.beast",
+  construct: "FU.speciesType.construct",
+  demon: "FU.speciesType.demon",
+  elemental: "FU.speciesType.elemental",
+  humanoid: "FU.speciesType.humanoid",
+  monster: "FU.speciesType.monster",
+  plant: "FU.speciesType.plant",
+  undead: "FU.speciesType.undead",
+};
+preLocalize("species", { key: "label", sort: true });

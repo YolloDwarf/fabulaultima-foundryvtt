@@ -99,9 +99,10 @@
       "shield",
       "armor",
       "accessory",
-      "feature",
-      "spell",
-      "ritual"
+      "class_feature",
+      "npc_feature",
+      "euipment",
+      "spell"
     ],
     "weapon": {
       "damage": {

@@ -73,203 +73,145 @@ FUItem.weapon = {
 };
 preLocalize("weapon", { key: "label", sort: true });
 
-FUItem.defensiveQualities = {
-  custom: { name: "FU.item.equipment.qualitiesList.custom", type: "textarea" },
+FUItem.qualities = {
+  custom: {
+    name: "FU.item.equipment.qualitiesList.custom",
+    type: "textarea",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
+  },
   antiStatus: {
     name: "FU.item.equipment.qualitiesList.antiStatus",
     type: "select",
     options: "statuses",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   doubleResistance: {
     name: "FU.item.equipment.qualitiesList.doubleResistance",
     type: "select",
     options: "damageTypes",
     multiChoice: true,
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   healingPlus: {
     name: "FU.item.equipment.qualitiesList.healingPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   immunity: {
     name: "FU.item.equipment.qualitiesList.immunity",
     type: "select",
     options: "damageTypes",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   initiativePlus: {
     name: "FU.item.equipment.qualitiesList.initiativePlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   magicPlus: {
     name: "FU.item.equipment.qualitiesList.magicPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   perfectHealth: {
     name: "FU.item.equipment.qualitiesList.perfectHealth",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   precisionPlus: {
     name: "FU.item.equipment.qualitiesList.precisionPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   resistance: {
     name: "FU.item.equipment.qualitiesList.resistance",
     type: "select",
     options: "damageTypes",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   spellPlus: {
     name: "FU.item.equipment.qualitiesList.spellPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   swordBreak: {
     name: "FU.item.equipment.qualitiesList.swordBreak",
+    availableFor: ["accessory", "armor", "shield", "weapon"],
   },
   vitalityPlus: {
     name: "FU.item.equipment.qualitiesList.vitalityPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
   weaponPlus: {
     name: "FU.item.equipment.qualitiesList.weaponPlus",
+    availableFor: ["accessory", "armor", "shield"],
   },
-};
-preLocalize("defensiveQualities", { key: "label", sort: true });
-
-FUItem.accessoryQualities = {
-  custom: { name: "FU.item.equipment.qualitiesList.custom", type: "textarea" },
   amulet: {
     name: "FU.item.equipment.qualitiesList.amulet",
-  },
-  antiStatus: {
-    name: "FU.item.equipment.qualitiesList.antiStatus",
-    type: "select",
-    options: "statuses",
+    availableFor: ["accessory", "weapon"],
   },
   bulwark: {
     name: "FU.item.equipment.qualitiesList.bulwark",
+    availableFor: ["accessory", "weapon"],
   },
   damageChange: {
     name: "FU.item.equipment.qualitiesList.damageChange",
     type: "select",
     options: "damageTypes",
-  },
-  doubleResistance: {
-    name: "FU.item.equipment.qualitiesList.doubleResistance",
-    type: "select",
-    options: "damageTypes",
-    multiChoice: true,
-  },
-  healingPlus: {
-    name: "FU.item.equipment.qualitiesList.healingPlus",
-  },
-  immunity: {
-    name: "FU.item.equipment.qualitiesList.immunity",
-    type: "select",
-    options: "damageTypes",
-  },
-  initiativePlus: {
-    name: "FU.item.equipment.qualitiesList.initiativePlus",
-  },
-  magicPlus: {
-    name: "FU.item.equipment.qualitiesList.magicPlus",
+    availableFor: ["accessory"],
   },
   omnishield: {
     name: "FU.item.equipment.qualitiesList.omnishield",
-  },
-  perfectHealth: {
-    name: "FU.item.equipment.qualitiesList.perfectHealth",
-  },
-  precisionPlus: {
-    name: "FU.item.equipment.qualitiesList.precisionPlus",
-  },
-  resistance: {
-    name: "FU.item.equipment.qualitiesList.resistance",
-    type: "select",
-    options: "damageTypes",
-  },
-  spellPlus: {
-    name: "FU.item.equipment.qualitiesList.spellPlus",
-  },
-  swordBreak: {
-    name: "FU.item.equipment.qualitiesList.swordBreak",
-  },
-  vitalityPlus: {
-    name: "FU.item.equipment.qualitiesList.vitalityPlus",
-  },
-  weaponPlus: {
-    name: "FU.item.equipment.qualitiesList.weaponPlus",
-  },
-};
-preLocalize("accessoryQualities", { key: "label", sort: true });
-
-FUItem.weaponQualities = {
-  custom: { name: "FU.item.equipment.qualitiesList.custom", type: "textarea" },
-  amulet: {
-    name: "FU.item.equipment.qualitiesList.amulet",
-  },
-  antiStatus: {
-    name: "FU.item.equipment.qualitiesList.antiStatus",
-    type: "select",
-    options: "statuses",
+    availableFor: ["accessory", "weapon"],
   },
   bonusMagic: {
     name: "FU.item.equipment.qualitiesList.magicBonus",
+    availableFor: ["weapon"],
   },
   bonusPrecision: {
     name: "FU.item.equipment.qualitiesList.precisionBonus",
+    availableFor: ["weapon"],
   },
   breaks: {
     name: "FU.item.equipment.qualitiesList.breaks",
-  },
-  bulwark: {
-    name: "FU.item.equipment.qualitiesList.bulwark",
+    availableFor: ["weapon"],
   },
   doubleHunting: {
     name: "FU.item.equipment.qualitiesList.doubleHunting",
-    type: "text",
-    options: "creatureTypes",
-    multiChoice: true,
-  },
-  doubleResistance: {
-    name: "FU.item.equipment.qualitiesList.doubleResistance",
     type: "select",
-    options: "damageTypes",
+    options: "speciesType",
     multiChoice: true,
+    availableFor: ["weapon"],
   },
   equipFreeHand: {
     name: "FU.item.equipment.qualitiesList.alwaysEquipped",
+    availableFor: ["weapon"],
   },
   extraDamage: {
     name: "FU.item.equipment.qualitiesList.extraDamage",
     type: "number",
+    availableFor: ["weapon"],
   },
   heavyWeight: {
     name: "FU.item.equipment.qualitiesList.heavyWeight",
+    availableFor: ["weapon"],
   },
   hunting: {
     name: "FU.item.equipment.qualitiesList.hunting",
-    type: "text",
-    options: "creatureTypes",
-  },
-  immunity: {
-    name: "FU.item.equipment.qualitiesList.immunity",
     type: "select",
-    options: "damageTypes",
+    options: "speciesType",
+    availableFor: ["weapon"],
   },
   lightWeight: {
     name: "FU.item.equipment.qualitiesList.lightWeight",
+    availableFor: ["weapon"],
   },
   magical: {
     name: "FU.item.equipment.qualitiesList.magical",
+    availableFor: ["weapon"],
   },
   multi: {
     name: "FU.item.equipment.qualitiesList.multi",
     type: "number",
-  },
-  perfectHealth: {
-    name: "FU.item.equipment.qualitiesList.perfectHealth",
+    availableFor: ["weapon"],
   },
   piercing: {
     name: "FU.item.equipment.qualitiesList.piercing",
-  },
-  omnishield: {
-    name: "FU.item.equipment.qualitiesList.omnishield",
-  },
-  resistance: {
-    name: "FU.item.equipment.qualitiesList.resistance",
-    type: "select",
-    options: "damageTypes",
+    availableFor: ["weapon"],
   },
   status: {
     name: "FU.item.equipment.qualitiesList.status",
@@ -282,11 +224,8 @@ FUItem.weaponQualities = {
     options: "statuses",
     multiChoice: true,
   },
-  swordBreak: {
-    name: "FU.item.equipment.qualitiesList.swordBreak",
-  },
 };
-preLocalize("weaponQualities", { key: "label", sort: true });
+preLocalize("qualities", { key: "label", sort: true });
 
 FUItem.equipmentClass = {
   simple: "FU.item.equipment.equipmentClass.simple",
